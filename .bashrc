@@ -369,4 +369,10 @@ else
     #echo "*** DBG: NO CONDA"  # dbg
     export JUPYTER_PATH=$HOME/.local/share/jupyter
 fi
+
+
+
+function jpt(){
+        jupyter notebook --no-browser --port=$1
+}
 #**********************  END OF FILE <.bashrc> *******************************
