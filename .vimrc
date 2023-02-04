@@ -72,12 +72,22 @@ set wildmode=list:longest
 " Wildmenu will ignore files with these extensions.
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
+
+
+
+inoremap ,, <esc>:xa<cr>
+nnoremap ,, :xa<cr>
+
+nnoremap ,[ :tabp<cr>
+nnoremap ,] :tabn<cr>
+
+
 "set hl
 "set ts=4
 "set sw=1
 "set autoindent
 "set cindent
-"set smartindent
+""set smartindent
 "set smarttab
 "set modeline
 "set backspace=2
