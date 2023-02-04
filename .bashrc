@@ -347,14 +347,14 @@ fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/raymond/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/om2/user/rlwang/anaconda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/raymond/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/raymond/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/om2/user/rlwang/anaconda/etc/profile.d/conda.sh" ]; then
+        . "/om2/user/rlwang/anaconda/etc/profile.d/conda.sh"
     else
-        export PATH="/home/raymond/anaconda3/bin:$PATH"
+        export PATH="/om2/user/rlwang/anaconda/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -375,4 +375,12 @@ fi
 function jpt(){
         jupyter notebook --no-browser --port=$1
 }
+
+function jpt_node() {
+  local port=$1
+  cd /om2/
+  jupyter notebook --ip=0.0.0.0 --port=$port --no-browser
+}
+
+
 #**********************  END OF FILE <.bashrc> *******************************
